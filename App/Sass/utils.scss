@@ -1,0 +1,64 @@
+// SMALL DEVICES
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// MEDIUM DEVICES
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin button($backgroundColor, $fontColor) {
+  background-color: $backgroundColor;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid $backgroundColor;
+  border-radius: 2px;
+  color: $fontColor;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@mixin flex($items, $content, $gap: 0px, $direction: row) {
+  display: flex;
+  align-items: $items;
+  justify-content: $content;
+  gap: $gap;
+  flex-direction: $direction;
+}
+
+@mixin responsive_max_width {
+  max-width: 1400px;
+  margin: auto;
+}
+
+@mixin plan_name_button($backgroundColor, $textColor) {
+  width: 100%;
+  background-color: $backgroundColor;
+  color: $textColor;
+  padding: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+@mixin input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.8rem;
+  outline: 1px solid $primary-color;
+  border: none;
+  border-radius: 2px;
+}
+
+@mixin textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.8rem;
+  border-radius: 2px;
+  border: none;
+  outline: 1px solid $primary-color;
+}
